@@ -69,9 +69,10 @@ def read_memmap(mem_file_name):
         
 
 if __name__ == "__main__":
+    from torch.utils.data.Dataloader
     config = DatasetConfig(seq_len=10000)
     dataset = SlippiDataset(config)
-    
+    dataloader = Dataloader(dataset)
     for id, data in enumerate(dataset):
         for k, v in data.items():
             print(k, v.shape)

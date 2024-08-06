@@ -37,12 +37,12 @@ class SLPPreprocessor:
 def main(args):
     """main function to convert slp to memmap, only used when run this file
     """
+    
     preprocessor = SLPPreprocessor(args.source_path, args.target_path)
     preprocessor.process()
     
 if __name__ == "__main__":
     import argparse
-
     parser = argparse.ArgumentParser()
     parser.add_argument("--source_path", type=str, default="/root/data/jay/training_data", help="source path of flattened slp dataset")
     parser.add_argument("--target_path", type=str, default="/root/data/skyview/mm", help="target path of flattened memmap dataset")
